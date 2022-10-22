@@ -1,0 +1,26 @@
+<h1>UNDER CONSTRUCTION</h1>
+
+<div class = "container">
+  <div class="card rounded my-2">
+      <h2> User Dashboard</h2>
+      <a type="button" class="btn btn-success" href="/servePost">Add new Post</a>
+
+
+
+      {{#each posts as |post|}}
+        <div class="card  rounded my-2">   
+        
+            <h5><a href="/api/posts/edit/{{post.id}}" class="card-link">{{post.title}} {{post.id}}</a></h5>
+            <p class = "float-right fs-5">Posted on {{format_date post.date_created}} </p>    
+        
+        </div>
+        {{/each}}
+  </div>
+</div>
+   <!--<div class="container">
+    <div class="d-flex justify-content-center">
+    </div>
+      <a type="button" class="btn btn-success" href="/servePost">Add new Post</a>
+
+   </div>-->
+ 
