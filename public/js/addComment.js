@@ -13,7 +13,7 @@ const addCommentHandler = async (event) => {
 
   
     if (message &&  post_id) {
-      const response = await fetch(`/api/posts/commentCreate`, {
+      const response = await fetch(`/api/comments/commentCreate`, {
         method: 'POST',
         body: JSON.stringify({ message, post_id }),
         headers: { 'Content-Type': 'application/json' },

@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 /////////////////////////////////////////////////////////////////////
 console.log("inside postRoutes");
 
-
+console.log("inside comments route");
 router.post('/commentCreate',  async (req, res) => { 
   console.log("new comment");
   console.log(req.body.message);
@@ -86,6 +86,7 @@ router.get('/view/:id',  async (req, res) => {
       res.status(500).json(err);
     }
 });
+
 
 //add new post
 router.post('/newPost', withAuth, async (req, res) => { 

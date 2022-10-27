@@ -2,7 +2,7 @@
 <div class="card  my-2">
     <div class="card-header ">
       <h5> <a href="#" class="card-link">{{title}} {{id}}</a></h5>
-      <span class = "float-right fs-5"><p>Posted by {{user_name}} {{id}}on {{date_created}}</p></span>     
+      <span class = "float-right fs-5"><p>Posted by {{user_name}} {{id}}on {{format_date date_created}}</p></span>     
        
     </div>
     <div class="card-body rounded">
@@ -17,7 +17,7 @@
   <div class="card  my-2">
     <div class="card-header ">
      
-       <p><span class = "float-right fs-5">Posted by{{comment.user.user_name}}  on {{comment.date_created}} </span></p>
+       <p><span class = "float-right fs-5">Comment by{{comment.user.user_name}}  on {{format_date comment.date_created}} </span></p>
     </div>
     <div class="card-body rounded">
       

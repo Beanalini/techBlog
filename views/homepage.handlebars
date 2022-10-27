@@ -2,7 +2,7 @@
   {{#each posts as |post|}}
   <div class="card  my-2">
     <div class="card-header ">
-     <h5><span class="float-let"> <a href="/api/posts/view/{{post.id}}" class="card-link">{{post.title}} {{post.id}}</a></span>
+     <h5><span class="float-let"> <a href="/api/comments/view/{{post.id}}" class="card-link">{{post.title}} {{post.id}}</a></span>
        <span class = "float-right fs-5">Posted by {{post.user.user_name}} {{post.user_id}}on {{format_date post.date_created}} </span></h5>
     </div>
     <div class="card-body rounded">
