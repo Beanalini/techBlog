@@ -20,8 +20,8 @@ router.get('/', async (req, res) => {
     console.log(posts);
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      posts 
-     
+      posts,
+      logged_in: req.session.logged_in      
     });
 
     //for testing using Insomnia
@@ -84,5 +84,8 @@ router.get('/servePost', withAuth, (req, res) => {
     logged_in: req.session.logged_in  
   });
 }); 
+
+
+
 
 module.exports = router;

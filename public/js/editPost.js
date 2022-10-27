@@ -4,8 +4,8 @@ const editPostHandler = async (event) => {
     console.log("inside edit post")
     const title = document.querySelector('#post-title').value.trim();
     const description = document.querySelector('#post-text').value.trim();
-    const postId = document.getElementById('span');
-    const id = parseInt(postId);
+    const input = document.getElementById('span');
+    const id = parseInt(input.getAttribute('data-id'));
 
 
     console.log(`New post title: ${title}`);
@@ -14,20 +14,48 @@ const editPostHandler = async (event) => {
 
   
     if (title && description && id) {
-      const response = await fetch(`/api/posts/edit/${id}`, {
+      const response = await fetch(`/api/posts/${id}`, {
         method: 'PUT',
         body: JSON.stringify({ title, description }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/');
       } else {
-        alert('Failed edit post');
+        alert('Failed to edit post');
       }
     }
-  };
+    console.log("all inputs received");
+   };
+  
 
-  document.querySelector('#new-post').addEventListener('click', editPostHandler);
+  document.querySelector('#update-post').addEventListener('click', editPostHandler);
+
+
+  const deletePostHandler = async (event) => {
+    event.preventDefault();
+      
+    const input = document.getElementById('span');
+    const id = parseInt(input.getAttribute('data-id'));
+
+    console.log(`inside editPost.js, delete post id ${id}`);  
+
+  
+    if (id) {
+      const response = await fetch(`/api/posts/delete/${id}`, {
+        method: 'DELETE',
+        
+      });
+  
+      if (response.ok) {
+        document.location.replace('/');
+      } else {
+        alert('Failed to DELETE post');
+      }
+    }
+    
+   };
+  
+
+  document.querySelector('#delete-post').addEventListener('click', deletePostHandler);

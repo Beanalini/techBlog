@@ -3,11 +3,11 @@
     </div>
         <div class="card-body">   
             <h3 class="card-title text-center">Update Post {{id}}</h3>             
-            <form class="form" id="form-login">
-                <span id="span" data-postId="{{id}}" ></span>
+            <formv class="form" id="form-login">
+                <span id="span" data-id="{{id}}" >
                 <div class="mb-3">
                     <label for="post-title" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="post-title" value="{{title}}">   
+                    <textarea type="textarea" class="form-control" id="post-title">{{title}} </textarea>   
                 </div> 
                 <div class="mb-3">
                     <label for="post-text" class="form-label">Post Description</label>
@@ -16,7 +16,7 @@
                 <div class="gap-2 text-center">
                     <button class="btn-lg btn-primary" id="update-post"  type="submit">Update</button>
                 </div>                      
-            </form>
+            <form>
         </div>
 </div>
 <div class="card text-center my-4 gap-2">
@@ -25,10 +25,13 @@
             
     <div class="card-body">
         <h4 class="card-title">Remove Post</h4>              
-        <a href="/api/post/delete/{{post_id}}" class="btn-lg btn-danger">Delete</a>
+       
+         <button class="btn-lg btn-danger" id="delete-post"  type="submit">Delete</button>
        
     </div>
     <div class="card-footer text-muted">
         
     </div>
 </div>
+
+ <script src="/js/editPost.js"></script>
