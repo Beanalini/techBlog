@@ -1,25 +1,24 @@
-<h1>Your Posts</h1>
+<h2>Your Posts</h2>
 
 <div class = "container">
-
-
-      {{#each posts as |post|}}
-        <div class="card  rounded my-2">   
-            <span data-postID="{{post.id}}", data-userID="user.id"></span>
-            <a href="/api/posts/edit/{{post.id}}" class="card-link"><h5>{{post.title}} {{post.id}}</h5></a>
-            <p class = "float-right fs-5">Posted on {{format_date post.date_created}} </p>    
+  {{#each posts as |post|}}
+    <div class="card  my-2">
+      <div class="card-header ">
+        <span class="float-left"> <a class="card-header-link card-link" href="/api/posts/edit/{{post.id}}">{{post.title}} {{post.id}}</a></span>
+          <span class = "float-right ">Posted by {{post.user.user_name}} on {{format_date post.date_created}} </span>
+      </div>
+      <div class="card-body rounded">
         
-        </div>
-        {{/each}}
-
-        
-      <a type="button" class="btn btn-success" href="/servePost">Add new Post</a>
- 
-</div>
-   <div class="container">
-    <div class="d-flex justify-content-center">
+        <p class="card-text">{{post.description}}</p>
+      
+      </div>
+      
     </div>
-      <a type="button" class="btn btn-success" href="/servePost">Add new Post</a>
+  {{/each}}
 
-   </div>
+  <div class="gap-2 text-center">
+      <a href="/servePost" class="btn-lg btn-primary" type="button">Add New Post</a>
+  </div>           
+</div>
+
  

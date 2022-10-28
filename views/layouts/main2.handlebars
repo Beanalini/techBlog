@@ -16,23 +16,23 @@
 
 <body>
   <header>
-    <div class="p-2 text-white">
+    <div class="p-2 bg-success text-white">
        <h1>
         <span role="img" aria-label="laptop"><i class="fa-solid fa-laptop-code"></i></span>
-        <a class="links" href="/">Tech Blog</a></div> 
+        <a href="/">Tech Blog</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
-        <a  class="nav-link" href="/">Homepage</a> 
+        <a href="/">Homepage</a> 
         {{#if logged_in}}
-        <a  class="nav-link" href="/dashboard">Dashboard</a> 
-        <a  class="nav-link" id="logout">Logout</a>
+        <a  href="/dashboard">Dashboard</a> |
+        <a  id="logout">Logout</a>
         {{else}}
-        <a  class="nav-link" href="/login">Dashboard</a> 
-        <a  class="nav-link" href="/login">Login</a>
+        <a  href="/login">Dashboard</a> 
+        <a  href="/login">Login</a>
         {{/if}}
       </nav>
-      
+    </div>   
 
   </header>
   

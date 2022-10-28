@@ -1,0 +1,116 @@
+:root {
+    --white: #fff;
+    --navy-blue: #13293d;
+    --light-grey: #bab7b6;
+    --dark-grey: rgb(91, 87, 94)
+  
+  }
+  
+  
+  /*------Global selectors-----*/
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    line-height: 1.1;
+    max-height: 100vh;
+    font-size: 16px;
+    background-color: var(--light-grey);
+    }
+  
+    /*section heading styling*/
+    /*h2 {
+      background-color: var(--dark-grey);
+      padding: 5px;
+      margin:0;
+      color:var(--white);
+      font-size: 180%; 
+      display:inline-block;
+    }*/
+
+    h2 {
+        text-align: center;
+    }
+  
+  /************header section**************/
+  header {
+      background-color: var(--dark-grey);
+      color: var(--white);
+      padding: 5px;
+      align-items: right;
+      border-bottom: 5px solid var(--navy-blue);
+     }
+  
+  h1 {
+      align-content: left;
+      padding-top: 5px;
+      font-size: 300%;
+     }
+  
+  /* Container for Nav link buttons */
+  nav {
+      display: flex;
+      background-color:var(--dark-grey);
+      justify-content: right;      
+  }
+  
+  /* Link button/boxes for header and footer*/
+  .nav-link, .contact-links {
+    width: 120px;
+    margin: 0 0.5%;  
+    background-color: var(--navy-blue);
+    border: 3px solid var(--navy-blue);
+    box-shadow: 0 0 20px #000 inset;
+     
+  }
+  
+  /*Styling for header and footer links*/
+  nav .nav-link, .contact-links {
+    
+    color:var(--white);
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size:100%;
+    text-align: center;
+   
+  }
+  
+  
+  /*  change header and footer Link button colour on mouse hover */
+  .nav-link:hover, .contact-links:hover {
+    background-color: var(--light-grey);
+    color: var(--white);
+  }
+  
+  /* change header and footer when link is being pressed */
+   .nav-link:active, .contact-links:active {
+    font-size: 100%;
+    box-shadow: 0 0 10px #000 inset;
+  }
+
+
+  .links {
+    color: var(--navy-blue);
+
+  }
+
+  .card {
+    border: 1px solid var(--dark-grey);
+    background-color: #b9bec7;
+
+  }
+
+  .card-header, .card-header-link
+  {
+    border: 1px solid var(--dark-grey);
+    background-color: var(--navy-blue);
+    color: white;
+
+  }
+  .card-footer {
+    background-color: var(--navy-blue);
+
+  }
