@@ -5,10 +5,8 @@ const withAuth = require('../../utils/auth');
 //PostRoute.js contains all routes related to Post related activity //
 //             /api/posts                                          //
 /////////////////////////////////////////////////////////////////////
-console.log("inside postRoutes");
 
-console.log("inside comments route");
-router.post('/commentCreate',  async (req, res) => { 
+router.post('/commentCreate',  withAuth, async (req, res) => { 
   console.log("new comment");
   console.log(req.body.message);
   console.log(req.body.post_id);
@@ -30,7 +28,7 @@ router.post('/commentCreate',  async (req, res) => {
 
 
 
-router.get('/view/:id',  async (req, res) => {
+router.get('/view/:id',  withAuth, async (req, res) => {
   console.log("inside  view comments route ")
   try {
         console.log(req.params.id);
