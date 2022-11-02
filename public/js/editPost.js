@@ -6,11 +6,12 @@ const editPostHandler = async (event) => {
     const description = document.querySelector('#post-text').value.trim();
     const input = document.getElementById('span');
     const id = parseInt(input.getAttribute('data-id'));
-
+    
 
     console.log(`New post title: ${title}`);
     console.log(`New post text: ${description}`);
     console.log(`Post id is: ${id}`);
+    
 
   
     if (title && description && id) {

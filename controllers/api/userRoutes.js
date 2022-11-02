@@ -5,14 +5,13 @@ const withAuth = require('../../utils/auth');
 //create new user account
 router.post('/signUp', async (req, res) => {
   console.log(req.body);
-  try {
-    console.log("inside user registration")
+  try {    
     const userData = await User.create(req.body);
-    console.log(userData);
+    
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      console.log(userData);
+      //console.log(userData);
       
       res.status(200).json(userData);
     });
@@ -24,7 +23,7 @@ router.post('/signUp', async (req, res) => {
 
 //login route
 router.post('/login', async (req, res) => {
-  console.log(req.body);  
+  //console.log(req.body);  
   try {
       
       const userData = await User.findOne({ where: { email: req.body.userEmail } });
@@ -77,7 +76,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
-
 
 module.exports = router;

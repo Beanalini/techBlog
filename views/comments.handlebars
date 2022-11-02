@@ -2,32 +2,33 @@
 <div class="card  my-2">
     <div class="card-header ">
       <h5> {{title}} </h5>
-      <span class = "float-right fs-5"><p>Posted by {{user.user_name}} on {{format_date date_created}}</p></span>     
-       
+      <span class = "float-right fs-5"><p>Posted by {{user.user_name}} on {{format_date date_created}} </p></span>            
     </div>
-    <div class="card-body rounded">
-      
-      <p class="card-text">{{description}}</p>
-     
-    </div>
-    
+    <div class="card-body rounded">      
+      <p class="card-text">{{description}} {{log_userId}}</p>     
+    </div>    
   </div>
 <!--Comment details-->
 {{#each commentSer as |comment|}}
   <div class="card  my-2">
     <div class="card-header ">
      
-       <p><span class = "float-right fs-5">Comment posted by {{comment.user.user_name}}  on {{format_date comment.date_created}} </span></p>
+       <p><span class = "float-right fs-5">Comment posted by {{comment.user.user_name}}  on {{format_date comment.date_created}} {{comment.userId}} {{log_userId}}</span></p>
     </div>
-    <div class="card-body rounded">
-      
-      <p class="card-text">{{comment.message}}</p>
-    
+    <div class="card-body rounded">      
+      <p class="card-text">{{comment.message}}</p>      
     </div>
-    
+    {{#if (ifSame comment.log_user comment.user_id)}}
+     <div class="card-footer text-muted">
+             
+              <a href="/api/comments/editView/{{comment.id}}" class="card-link">Edit comment</a>
+              
+            </div>  
+    {{/if}}
   </div>
-  {{/each}}
 
+  {{/each}}
+  
   <div class="card">
     <div class="card-header">                
     </div>
@@ -36,7 +37,7 @@
             <form class="form" id="form-login">
                 <span id="span" data-PostId="{{id}}" >
                 <div class="mb-3">
-                    <label for="comment-text" class="form-label">Post Description</label>
+                    <label for="comment-text" class="form-label">Comment Text</label>
                     <textarea type="textarea" class="form-control" id="comment-text"></textarea>
                 </div>
                 <div class="gap-2 text-center">

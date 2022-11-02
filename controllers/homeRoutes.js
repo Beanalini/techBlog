@@ -58,8 +58,7 @@ router.get('/signUp', (req, res) => {
 
 router.get('/dashboard', withAuth, async (req, res) => {
   // User is already logged in, find their blog posts based on session ID
-  console.log("in dashboard homeroutes");
-  try {
+   try {
     // Find the logged in user based on the session ID
    
     const userData = await User.findByPk(req.session.user_id, {
@@ -68,7 +67,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    console.log(user);
+    //console.log(user);
     res.render('dashboard', {
       ...user,
       logged_in: true
