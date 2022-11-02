@@ -1,4 +1,4 @@
-# E-Commerce Back End [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+# Tech Blog [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   
   ## Table of Contents  
   * [Description](#description)
@@ -14,21 +14,20 @@
   
   ## Description
 
-  E-commerce, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. Platforms like Shopify and WooCommerce provide a suite of e-commerce services to businesses of all sizes.  The motivation behind this project was to understand the fundamental architecture of these platforms through building the back end for an e-commerce website.
 
-  The e-commerce back end developed in this project is a RESTful API that performs the standard create, read, update and delete (CRUD) operations.  The API is built on an Express JS server that  uses Sequelize as the ORM tool to interact with a MySQL database.  
+
   
        
   ### Functional Requirements
 
-  The functional requirements that the E-commerce back end has been designed to meet, is defined by the user story and acceptance criteria listed below.  
+  The functional requirements that the Tech Blog application has been designed to meet, is defined by the user story and acceptance criteria listed below.  
 
   #### User Story
 
-  ```md
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
+ ```md
+AS A developer who writes about tech
+I WANT a CMS-style blog site
+SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
 
  
@@ -36,23 +35,45 @@ SO THAT my company can compete with other e-commerce companies
 #### Acceptance Criteria
 
 ```md
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in Insomnia for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete data in my database
+GIVEN a CMS-style blog site
+WHEN I visit the site for the first time
+THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+WHEN I click on the homepage option
+THEN I am taken to the homepage
+WHEN I click on any other links in the navigation
+THEN I am prompted to either sign up or sign in
+WHEN I choose to sign up
+THEN I am prompted to create a username and password
+WHEN I click on the sign-up button
+THEN my user credentials are saved and I am logged into the site
+WHEN I revisit the site at a later time and choose to sign in
+THEN I am prompted to enter my username and password
+WHEN I am signed in to the site
+THEN I see navigation links for the homepage, the dashboard, and the option to log out
+WHEN I click on the homepage option in the navigation
+THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
+WHEN I click on an existing blog post
+THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
+WHEN I enter a comment and click on the submit button while signed in
+THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
+WHEN I click on the dashboard option in the navigation
+THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
+WHEN I click on the button to add a new blog post
+THEN I am prompted to enter both a title and contents for my blog post
+WHEN I click on the button to create a new blog post
+THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
+WHEN I click on one of my existing posts in the dashboard
+THEN I am able to delete or update my post and taken back to an updated dashboard
+WHEN I click on the logout option in the navigation
+THEN I am signed out of the site
+WHEN I am idle on the site for more than a set time
+THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
 
   ## Installation
   
-  Afer cloning the application follow the instructions below to install the application:
+  After cloning the application follow the instructions below to install the application:
 
     
   Install dependancies:
@@ -69,71 +90,9 @@ THEN I am able to successfully create, update, and delete data in my database
 
   ## Usage
   
-  Before running the back end application you need to:
+  
 
-[1]  Create the database you by logging into MySQL: 
-    
-     -u root -p    (you will be promted to enter your mySQL password)
-
-[2]  Run the schema to create the database:
-
-
-    source db/schema.sql
-
-[3] Enter the following command to exit MySQL:
-
-    quit
-
-[3] Run the seed files to populate the database with the sample data:
-
-    npm run seed
-
-To run the e-commerce application enter:
-
-    npm start
-
- You can test the APIs  and perform  CRUD operations using  an API REST tool such as Insomnia or Postman (Insomnia was used in this project).
-
- Available API routes to test are (id = the number of the item):
-
- Categories:
-
-- [Get] http://localhost:3001/api/categories/
-
-- [Get] http://localhost:3001/api/categories/id
-
-- [Post] http://localhost:3001/api/categories/
-
-- [Put] http://localhost:3001/api/categories/id
-
-- [delete] http://localhost:3001/api/categories/id
-
-Products:
-
-- [Get] http://localhost:3001/api/products/
-
-- [Get] http://localhost:3001/api/products/id
-
-- [Post] http://localhost:3001/api/products/
-
-- [Put] http://localhost:3001/api/products/id
-
-- [delete] http://localhost:3001/api/products/id
-
-Tag:
-
-- [Get] http://localhost:3001/api/tags/
-
-- [Get] http://localhost:3001/api/tags/id
-
-- [Post] http://localhost:3001/api/tags/
-
-- [Put] http://localhost:3001/api/tags/id
-
-- [delete] http://localhost:3001/api/tags/id
-
-
- ## Walk Through Video
+ ## Deployed Application
 
    Click on the link below to view a walk-through video demonstrating the API routes of the e-commerce back end  application using Insomnia.
 
@@ -143,7 +102,7 @@ Tag:
 
   ## Screen Shots
 
-  The following screen shot shows the database being created.
+  The following screen shot.. 
 
  ![creating database](./assets/images/runschema.png)
 
@@ -169,10 +128,18 @@ The  screen shot below shows the API  catagories Get route being tested using In
   - MySQL
   - Sequelize
   - MySQL
-  - Insomnia REST Client
+
   - dotenv npm package
   
+  ## Resources
     
+  [https://handlebarsjs.com/guide/builtin-helpers.html#if](https://handlebarsjs.com/guide/builtin-helpers.html#if)
+
+  [(https://handlebarsjs.com/guide/builtin-helpers.html#if)](https://handlebarsjs.com/guide/builtin-helpers.html#if)  
+
+  (https://www.samanthaming.com/tidbits/86-window-location-cheatsheet/)
+
+  (https://stackoverflow.com/questions/8853396/logical-operator-in-a-handlebars-js-if-conditional)
  
   ## Questions
   If you have any questions regarding this project or contents of this repository, please contact me via:
@@ -183,7 +150,7 @@ The  screen shot below shows the API  catagories Get route being tested using In
 
   
   ## Contributing
-  If you would like to contribute to this project you can contact me by email at dat826@gmail.com or through  GitHub account   @[Beanalini](https://github.com/Beanalini).
+  If you would like to contribute to this project you can contact me by email at dat826@gmail.com or through my GitHub account   @[Beanalini](https://github.com/Beanalini).
   
 
   ## License

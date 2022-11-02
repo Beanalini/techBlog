@@ -7,7 +7,8 @@ module.exports = {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
-  //helper function to check if logged in user owns a comment
+  
+  //handlebars does not allow conditional checks - helper function required to check if logged in id == comment user id
   ifSame: (p1, p2) => {
     console.log(p1);
     console.log(p2);

@@ -5,7 +5,7 @@
       <span class = "float-right fs-5"><p>Posted by {{user.user_name}} on {{format_date date_created}} </p></span>            
     </div>
     <div class="card-body rounded">      
-      <p class="card-text">{{description}} {{log_userId}}</p>     
+      <p class="card-text">{{description}}</p>     
     </div>    
   </div>
 <!--Comment details-->
@@ -13,22 +13,21 @@
   <div class="card  my-2">
     <div class="card-header ">
      
-       <p><span class = "float-right fs-5">Comment posted by {{comment.user.user_name}}  on {{format_date comment.date_created}} {{comment.userId}} {{log_userId}}</span></p>
+       <p><span class = "float-right fs-5">Comment posted by {{comment.user.user_name}}  on {{format_date comment.date_created}}</span></p>
     </div>
     <div class="card-body rounded">      
       <p class="card-text">{{comment.message}}</p>      
     </div>
+    <!-- Allow logged in user to edit their comments-->
     {{#if (ifSame comment.log_user comment.user_id)}}
      <div class="card-footer text-muted">
              
-              <a href="/api/comments/editView/{{comment.id}}" class="card-link">Edit comment</a>
+              <a href="/api/comments/edit/{{comment.id}}" class="card-link">Edit comment</a>
               
             </div>  
     {{/if}}
   </div>
-
-  {{/each}}
-  
+  {{/each}}  
   <div class="card">
     <div class="card-header">                
     </div>

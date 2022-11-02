@@ -1,13 +1,10 @@
+////////////////////Add a new Blog Post/////////////////////////////////////
 const newPostHandler = async (event) => {
     event.preventDefault();
   
     
     const title = document.querySelector('#post-title').value.trim();
     const description = document.querySelector('#post-text').value.trim();
-
-    console.log(`New post title: ${title}`);
-    console.log(`New post text: ${description}`);
-
   
     if (title && description) {
       const response = await fetch(`/api/posts/newPost`, {

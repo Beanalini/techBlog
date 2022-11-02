@@ -1,17 +1,11 @@
+///////////////////Add a new comment to a post/////////////////////////////////
 const addCommentHandler = async (event) => {
     event.preventDefault();
   
-    console.log("inside add comment")
-    const message = document.querySelector('#comment-text').value.trim();
-    
+    const message = document.querySelector('#comment-text').value.trim();    
     const input = document.getElementById('span');
     const post_id = parseInt(input.getAttribute('data-postId'));
-    
-
-    console.log(`New comment text: ${message}`);
-    console.log(`Post id is: ${post_id}`);
-
-  
+      
     if (message &&  post_id) {
       const response = await fetch(`/api/comments/commentCreate`, {
         method: 'POST',

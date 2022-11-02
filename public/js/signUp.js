@@ -7,7 +7,7 @@ const signUpHandler = async (e) => {
     const user_name = document.querySelector('#user-name').value.trim();
     const email = document.querySelector('#user-email').value.trim();
     const password = document.querySelector('#user-password').value.trim();
-    console.log(`Inside login ${email} ${password} ${user_name}`);
+   
     if (email && password && user_name) {
       // Send a POST request to the API endpoint
       const response = await fetch('/api/users/signUp', {

@@ -1,19 +1,13 @@
+////////////////////////////////////////////Edit Comment///////////////////////////////////////
 const editCommentHandler = async (event) => {
     event.preventDefault();
-  
-    console.log("inside edit comment")
-   
+     
     const message = document.querySelector('#comment-text').value.trim();
     const input = document.getElementById('span');
     const id = parseInt(input.getAttribute('data-id'));
     const post_id = parseInt(input.getAttribute('data-postId'));
-
     
-    console.log(`New comment text: ${message}`);
-    console.log(`comment id is: ${id}`);
-    console.log(`post id is: ${post_id}`);
-
-  
+      
     if (message) {
       const response = await fetch(`/api/comments/${id}`, {
         method: 'PUT',
@@ -27,12 +21,13 @@ const editCommentHandler = async (event) => {
         alert('Failed to edit post');
       }
     }
-    console.log("all inputs received");
-   };
+ };
   
 
   document.querySelector('#update-comment').addEventListener('click', editCommentHandler);
+/////////////////////////////////////////////////////////////////////////////////////////
 
+/////////////////////////////Delete Comment////////////////////////////////////////////
 
   const deleteCommentHandler = async (event) => {
     event.preventDefault();
@@ -40,7 +35,7 @@ const editCommentHandler = async (event) => {
     const input = document.getElementById('span');
     const id = parseInt(input.getAttribute('data-id'));
     const post_id = parseInt(input.getAttribute('data-postId'));
-    console.log(`inside editComment.js, delete comment id ${id}`);  
+    
 
   
     if (id) {
@@ -60,3 +55,4 @@ const editCommentHandler = async (event) => {
   
 
   document.querySelector('#delete-comment').addEventListener('click', deleteCommentHandler);
+  /////////////////////////////////////////////////////////////////////////////////////////////

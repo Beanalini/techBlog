@@ -27,7 +27,7 @@ router.post('/login', async (req, res) => {
   try {
       
       const userData = await User.findOne({ where: { email: req.body.userEmail } });
-      console.log(`User route: ${req.body.userEmail}${req.body.userPsw}`)
+      //console.log(`User route: ${req.body.userEmail}${req.body.userPsw}`)
   
       if (!userData) {
         console.log("email not found");

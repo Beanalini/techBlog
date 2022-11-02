@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    console.log("in root homeroutes");
+    
     const postData = await Post.findAll({
       include: [
         {
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
-    console.log(posts);
+    
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       posts,
@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  console.log("in login homeroutes");
+  
   if (req.session.logged_in) {
     res.redirect('/dashboard');
     return;
@@ -47,7 +47,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signUp', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  console.log("in signUp homeroutes");
+  
   if (req.session.logged_in) {
     res.redirect('/dashboard');
     return;
