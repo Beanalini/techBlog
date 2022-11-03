@@ -82,21 +82,21 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
   In order to connect mySQL to the database you will need to create a .env file in the project root directory that includes the following code:
 
-    DB_NAME='ecommerce_db'
+    DB_NAME='techBlog_db'
     DB_USER='root'
     DB_PASSWORD=<'your password'>     
 
   
 
-  ## Usage
+ ## Usage
   
   
 
  ## Deployed Application
 
-   Click on the link below to view a walk-through video demonstrating the API routes of the e-commerce back end  application using Insomnia.
+   Click on the link below to view the Tech Blog Application.
 
-   - [Link to e-commerce back end  walk-through video](https://watch.screencastify.com/v/AMgmpWLRPlwIUEI923Pd)
+   - [Link to Tech Blog application]()
 
    
 
@@ -104,20 +104,21 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
   The following screen shot.. 
 
- ![creating database](./assets/images/runschema.png)
+ ![Landing page](./assets/images/homepage.png)
 
+ ![Login page](./assets/images/login_page.png)
 
-  The  screen shot below shows the database being seeded with sample data and conecting to the server.
+![Sign up page](./assets/images/sign-up-page.png)
 
-  ![seeding database](./assets/images/seedconnect.png)
-  
-The  screen shot below shows the API  catagories Get route being tested using Insomnia.
+![Homepage logged in user](./assets/images/homepage-loggedUser.png)
 
-  ![Testing Get categories root](./assets/images/getAllCat.png)
+  ![dashboard](./assets/images/yourPosts.png)  
 
-  The  screen shot below shows  the API Post route for products being tested using Insomnia.
+  ![edit post](./assets/images/editPost.png)
 
-  ![Testing create products root](./assets/images/createProduct.png)
+  ![post with comments](./assets/images/postCommentAdd.png)
+
+   ![Edit comments](./assets/images/editComment.png)
 
   ## Tests
   No code tests have been implemented.
@@ -128,18 +129,23 @@ The  screen shot below shows the API  catagories Get route being tested using In
   - MySQL
   - Sequelize
   - MySQL
+  - Handlebars
+  - Bcrypt
+  - Heroku
 
   - dotenv npm package
   
   ## Resources
     
-  [https://handlebarsjs.com/guide/builtin-helpers.html#if](https://handlebarsjs.com/guide/builtin-helpers.html#if)
+  - How to add key value pairs to all objects in an array: [https://stackoverflow.com/questions/39827087/add-k- key-value-pair-to-all-objects-in-array](https://stackoverflow.com/questions/39827087/add-key-value-pair-to-all-objects-in-array)
 
-  [(https://handlebarsjs.com/guide/builtin-helpers.html#if)](https://handlebarsjs.com/guide/builtin-helpers.html#if)  
+  - Logical operators in a handlebars {{#if}} conditional: (https://stackoverflow.com/questions/8853396/logical-operator-in-a-handlebars-js-if-conditional)
 
-  (https://www.samanthaming.com/tidbits/86-window-location-cheatsheet/)
+  - Handlebars builtin helper functions: [(https://handlebarsjs.com/guide/builtin-helpers.html#if)](https://handlebarsjs.com/guide/builtin-helpers.html#if)  
 
-  (https://stackoverflow.com/questions/8853396/logical-operator-in-a-handlebars-js-if-conditional)
+  - Window location cheat sheet: [(https://www.samanthaming.com/tidbits/86-window-location-cheatsheet/)](https://www.samanthaming.com/tidbits/86-window-location-cheatsheet/)
+
+  
  
   ## Questions
   If you have any questions regarding this project or contents of this repository, please contact me via:
