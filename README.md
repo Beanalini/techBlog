@@ -132,12 +132,11 @@ User dashboard.  A user has the option to add a new post.  After adding a new po
 ![dashboard](./assets/images/yourPosts.png)  
 
 By clicking on the post title from the user dashboard, a user is able to update or delete their post.
-![edit post](./assets/images/editPost.png)
+![edit post](./assets/images/editposts.png)
 
-A logged in user is able to click on a post title from the Tech Blog home page, where they will be redirected to a page that displays the post and associated comments. 
+In order to a posts comments a  logged in user is able to click on a post title from the Tech Blog home page, and will be redirected to a page which displays the selected post and its associated comments. 
 
 ![Homepage logged in user](./assets/images/homepage-loggedUser.png)
-
   
  Post with comments and option to add a comment. A user is able to update or delete their own comments. 
 ![post with comments](./assets/images/postCommentAdd.png)
