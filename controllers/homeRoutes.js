@@ -78,12 +78,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
   
 })
 
-//serve add new post page
-router.get('/servePost', withAuth, (req, res) => {
-  res.render('addpost', {
-    logged_in: req.session.logged_in  
-  });
-}); 
 
 
 

@@ -4,7 +4,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Walk Through Video](#walk-through-video)
+  * [Deployed Application](#deployed-application)
   * [Screen Shots](#screen-shots)
   * [Tests](#tests)
   * [Technologies Used](#technologies-used)  
@@ -14,13 +14,13 @@
   
   ## Description
 
-
+ The motivation behind this project was to build a CMS-style blog site application  where developers can publish their blog posts and comment on other developers posts too. The Tech Blog Application follows the model, view controller (MVC) paradigm, uses Handlebars as the templating language, Sequelize as the ORM, SQL database and the expression-session npm package for authentication. The application has been deployed using heroku. 
 
   
        
   ### Functional Requirements
 
-  The functional requirements that the Tech Blog application has been designed to meet, is defined by the user story and acceptance criteria listed below.  
+  The functional requirements that the Tech Blog application has been designed to meet are defined by the user story and acceptance criteria listed below.  
 
   #### User Story
 
@@ -89,6 +89,17 @@ THEN I am able to view comments but I am prompted to log in again before I can a
   
 
  ## Usage
+
+- On entering the Tech Blog website a user a presented with existing blog posts. In order to add a post or comment on an existing post the user must wither sign-up or login.
+- After a user has logged  or signed-up, the user is presented with their dashboard where they can view their own posts or add a new post. 
+- Once logged in the buttons on the website header and the links on the post titles in teh Tech Blog homepage become active, allowing the user to view post comments. The login button changes to  logout whilst the user is logged in.
+- To view the comments for a particular post, from the Tech Blog home page, click on the post title - the post will be displayed along with posted comments and the user is able to:
+  - Add a comment to the post.
+  - Edit their own comments - update or delete.
+- A user can view their own posts by clicking on the Dashboard button at the top of the page. Posts belonging to the user will displayed and they have the option to;
+  - Add a new post
+  - Edit an existing post -  clicking on the post title gives the user the option to either update or delete a post.
+- A user is signed into the Tech Blog until their session expires or they logout.  This means a user is still able to access the site if they are idle for a period of time and their logged in session has not expired. 
   
   
 
@@ -96,42 +107,61 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
    Click on the link below to view the Tech Blog Application.
 
-   - [Link to Tech Blog application]()
+   - [Tech Blog application](https://secret-harbor-71774.herokuapp.com/)
 
    
 
   ## Screen Shots
 
-  The following screen shot.. 
+  
+
+Tech blog landing page - users must either login or sign-up to view comments, add posts and make edits to their posts and comments.
 
  ![Landing page](./assets/images/homepage.png)
 
+ User Login page. After logging in a user is redirected to their dashboard.
+
  ![Login page](./assets/images/login_page.png)
+
+ User signing-up page. After registering to use the site a user is redirected to their dashboard.
 
 ![Sign up page](./assets/images/sign-up-page.png)
 
+User dashboard.  A user has the option to add a new post.  After adding a new post, the dashboard will be updated with the new post.
+
+![dashboard](./assets/images/yourPosts.png)  
+
+By clicking on the post title from the user dashboard, a user is able to update or delete their post.
+![edit post](./assets/images/editPost.png)
+
+A logged in user is able to click on a post title from the Tech Blog home page, where they will be redirected to a page that displays the post and associated comments. 
+
 ![Homepage logged in user](./assets/images/homepage-loggedUser.png)
 
-  ![dashboard](./assets/images/yourPosts.png)  
+  
+ Post with comments and option to add a comment. A user is able to update or delete their own comments. 
+![post with comments](./assets/images/postCommentAdd.png)
 
-  ![edit post](./assets/images/editPost.png)
-
-  ![post with comments](./assets/images/postCommentAdd.png)
-
-   ![Edit comments](./assets/images/editComment.png)
+A user is able to edit or delete their comment
+![Edit comments](./assets/images/editComment.png)
 
   ## Tests
   No code tests have been implemented.
 
   ## Technologies Used
   - JavaScript
-  - Node Js
-  - MySQL
-  - Sequelize
-  - MySQL
+  - Css
+  - Bootstrap
   - Handlebars
-  - Bcrypt
+  - MySQL
+  - Node Js
   - Heroku
+  - Sequelize
+  - express
+  - mysql2  
+  - Bcrypt
+  - dotenv
+  
 
   - dotenv npm package
   
