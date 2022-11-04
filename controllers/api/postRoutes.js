@@ -6,12 +6,7 @@ const withAuth = require('../../utils/auth');
 //             /api/posts                                          //
 /////////////////////////////////////////////////////////////////////
 
-//serve add new post page
-router.get('/servePost', withAuth, (req, res) => {
-  res.render('addpost', {
-    logged_in: req.session.logged_in  
-  });
-});  
+
 
 //add new post
 router.post('/newPost', withAuth, async (req, res) => { 

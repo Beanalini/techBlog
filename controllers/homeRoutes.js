@@ -78,7 +78,16 @@ router.get('/dashboard', withAuth, async (req, res) => {
   
 })
 
-
+//serve add new post page
+router.get('/servePost', withAuth, (req, res) => {
+  try {
+     res.render('addpost', {
+    logged_in: req.session.logged_in  
+  });
+  } catch (err) {
+    res.status(500).json(err)
+  } 
+});  
 
 
 
