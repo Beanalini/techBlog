@@ -91,10 +91,10 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
  ## Usage
 
-- On entering the Tech Blog website a user a presented with existing blog posts. In order to add a post or comment on an existing post the user must wither sign-up or login.
-- After a user has logged  or signed-up, the user is presented with their dashboard where they can view their own posts or add a new post. 
-- Once logged in the buttons on the website header and the links on the post titles in teh Tech Blog homepage become active, allowing the user to view post comments. The login button changes to  logout whilst the user is logged in.
-- To view the comments for a particular post, from the Tech Blog home page, click on the post title - the post will be displayed along with posted comments and the user is able to:
+- On entering the Tech Blog website a user is presented with existing blog posts. In order to add a post or comment on an existing post, the user must either sign-up or login.
+- After a user has logged in or signed-up, the user is presented with a dashboard where they can view their own posts or add a new post. 
+- Once logged in, navigation buttons and  links on the post titles in the Tech Blog homepage become active allowing the user to view post comments. The login button changes to  logout whilst the user is logged in.
+- Comments for a particular post can be viewed by clicking on the post title in the Tech Blog home page - the post will be displayed along with posted comments and the user is able to:
   - Add a comment to the post.
   - Edit their own comments - update or delete.
 - A user can view their own posts by clicking on the Dashboard button at the top of the page. Posts belonging to the user will displayed and they have the option to;
@@ -103,7 +103,6 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 - A user is signed into the Tech Blog until their session expires or they logout.  This means a user is still able to access the site if they are idle for a period of time and their logged in session has not expired. 
   
   
-
  ## Deployed Application
 
    Click on the link below to view the Tech Blog Application.
@@ -140,9 +139,11 @@ In order to a posts comments a  logged in user is able to click on a post title 
 ![Homepage logged in user](./assets/images/homepage-loggedUser.png)
   
  Post with comments and option to add a comment. A user is able to update or delete their own comments. 
+ 
 ![post with comments](./assets/images/postCommentAdd.png)
 
-A user is able to edit or delete their comment
+A user is able to edit or delete their comments
+
 ![Edit comments](./assets/images/editComment.png)
 
   ## Tests
