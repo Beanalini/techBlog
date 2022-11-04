@@ -79,9 +79,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
 })
 
 //serve add new post page
-router.get('/servePost', withAuth, (req, res) => {
+router.get('/addPost', withAuth, async (req, res) => {
   try {
-     res.render('addpost', {
+     res.render('addPost', {
     logged_in: req.session.logged_in  
   });
   } catch (err) {
