@@ -9,6 +9,7 @@
   * [Tests](#tests)
   * [Technologies Used](#technologies-used)  
   * [Questions](#questions)
+  * [Resources](#resources)
   * [How to Contribute](#How-to-Contribute)   
   * [License](#license)
   
